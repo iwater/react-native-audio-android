@@ -1,0 +1,22 @@
+{
+  "name": "react-native-audio-android",
+  "description": "Social Share, Sending Simple Data to Other Apps",
+  "version": "1.0.0",
+  "repository": {
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "android",
+    "audio"
+  ],
+  "author": {
+    "name": "iwater",
+    "email": "iwater@gmail.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": ">= 0.13.0"
+  },
+  "readmeFilename": "README.md"
+}

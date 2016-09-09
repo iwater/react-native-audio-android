@@ -93,4 +93,20 @@ public class RNAudioRecordModule extends ReactContextBaseJavaModule {
     cb.invoke();
   }
 
+  @ReactMethod
+  public void getDuration(String mFileName, Callback cb) {
+    mPlayer = new MediaPlayer();
+    try {
+      mPlayer.setDataSource(mFileName);
+      mPlayer.prepare();
+      final int duration = mPlayer.getDuration();
+      mPlayer.release();
+      mPlayer = null;
+      cb.invoke(null, duration);
+    } catch (Exception e) {
+      Log.e(LOG_TAG, "prepare() failed");
+      cb.invoke(e.getMessage());
+    }
+  }
+
 }

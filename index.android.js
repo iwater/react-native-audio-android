@@ -3,22 +3,31 @@ var RNAudioRecord = NativeModules.RNAudioRecord;
 
 var _file = '';
 
-export function startRecording(filename) {
+export function startRecording(filename, callback) {
   _file = filename;
-  RNAudioRecord.startRecording(filename, err => console.log(['startRecording', filename, err]))
+  callback = callback || (err => console.log(['startRecording', filename, err]))
+  RNAudioRecord.startRecording(filename, callback)
 }
-  
-export function stopRecording() {
-  RNAudioRecord.stopRecording(err => {
+
+export function stopRecording(callback) {
+  callback = callback || (err => {
     console.log(['stopRecording', err])
     startPlaying(_file)
   })
+
+  RNAudioRecord.stopRecording(callback)
 }
 
-export function startPlaying(filename) {
-  RNAudioRecord.startPlaying(filename, err => console.log(['startPlaying', filename, err]))
+export function startPlaying(filename, callback) {
+  callback = callback || (err => console.log(['startPlaying', filename, err]))
+  RNAudioRecord.startPlaying(filename, callback)
 }
-  
-export function stopPlaying() {
-  RNAudioRecord.stopPlaying(err => console.log(['stopPlaying', err]))
+
+export function stopPlaying(callback) {
+  callback = callback || (err => console.log(['stopPlaying', err]))
+  RNAudioRecord.stopPlaying(callback)
+}
+
+export function getDuration(filename, cb) {
+  RNAudioRecord.getDuration(filename, cb)
 }

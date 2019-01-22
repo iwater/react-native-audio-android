@@ -1,7 +1,7 @@
 {
-  "name": "react-native-audio-android",
-  "description": "Social Share, Sending Simple Data to Other Apps",
-  "version": "1.0.0",
+  "name": "@tuofeng/react-native-audio-android",
+  "description": "",
+  "version": "1.0.1",
   "repository": {
   },
   "keywords": [
@@ -18,5 +18,5 @@
   "peerDependencies": {
     "react-native": ">= 0.13.0"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.MD"
 }

@@ -13,7 +13,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
 
     defaultConfig {
         minSdkVersion 16
@@ -32,6 +31,6 @@ android {
 }
 
 dependencies {
-    compile "com.facebook.react:react-native:0.13.+"
-    compile "com.android.support:support-v4:23.1.0"
+    implementation "com.facebook.react:react-native:0.13.+"
+    implementation "com.android.support:support-v4:23.1.0"
 }
